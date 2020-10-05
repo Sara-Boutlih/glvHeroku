@@ -33,9 +33,7 @@ public class Devis implements Serializable {
 	private String adresse;
 	private String provenance;
 	private int course;
-	//
 	private String arret;
-	//
 	private String vitesse;
 	private Long hauteurSousDalle;
 	private Long cuvette;
@@ -60,13 +58,6 @@ public class Devis implements Serializable {
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="id_user")
 	private Utilisateur user;
-	// private String[] accessoire
-	
-	
-	
-	
-	
-	
 	
 	public Devis(Long id, String matricule,LocalDate dateDevis, String client, String adresse, String provenance,
 			int course, String arret, String vitesse, Long hauteurSousDalle, Long cuvette, String modeEntrainement,
@@ -112,24 +103,13 @@ public class Devis implements Serializable {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
-
-
-
 	public LocalDate getDateDevis() {
 		return dateDevis;
 	}
 
-
-
-
 	public void setDateDevis(LocalDate localDate) {
 		this.dateDevis =  localDate;
 	}
-
-
-
-
 	public Long getId() {
 		return id;
 	}
