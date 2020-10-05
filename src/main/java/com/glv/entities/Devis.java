@@ -50,12 +50,12 @@ public class Devis implements Serializable {
 	private String porteCabine;
 	private String passage;
 	private String finition;
-	private String accessoire;
-	private String ventilateur;
-	private String pompier;
-	private String afficheur;
-	private String gong;
-	private String secoursAutomatique;
+	//private String accessoire;
+	private boolean ventilateur;
+	private boolean pompier;
+	private boolean afficheur;
+	private boolean gong;
+	private boolean secoursAutomatique;
 	private String etat;
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="id_user")
@@ -71,8 +71,8 @@ public class Devis implements Serializable {
 	public Devis(Long id, String matricule,LocalDate dateDevis, String client, String adresse, String provenance,
 			int course, String arret, String vitesse, Long hauteurSousDalle, Long cuvette, String modeEntrainement,
 			String localMachinerie, String acces, String dimensionGaine, String chargeUtile, String dimensionCabine,
-			String modele, String porteCabine, String passage, String finition, String accessoire, String ventilateur,
-			String pompier, String afficheur, String gong, String secoursAutomatique, String etat, Utilisateur user) {
+			String modele, String porteCabine, String passage, String finition, /*String accessoire*/ boolean ventilateur,
+			boolean pompier, boolean afficheur, boolean gong, boolean secoursAutomatique, String etat, Utilisateur user) {
 		super();
 		this.id = id;
 		this.matricule = matricule;
@@ -95,7 +95,7 @@ public class Devis implements Serializable {
 		this.porteCabine = porteCabine;
 		this.passage = passage;
 		this.finition = finition;
-		this.accessoire = accessoire;
+		//this.accessoire = accessoire;
 		this.ventilateur = ventilateur;
 		this.pompier = pompier;
 		this.afficheur = afficheur;
@@ -251,40 +251,39 @@ public class Devis implements Serializable {
 	public void setFinition(String finition) {
 		this.finition = finition;
 	}
-	public String getAccessoire() {
-		return accessoire;
-	}
-	public void setAccessoire(String accessoire) {
-		this.accessoire = accessoire;
-	}
-	public String getVentilateur() {
+
+	/*
+	 * public String getAccessoire() { return accessoire; } public void
+	 * setAccessoire(String accessoire) { this.accessoire = accessoire; }
+	 */
+	public boolean getVentilateur() {
 		return ventilateur;
 	}
-	public void setVentilateur(String ventilateur) {
+	public void setVentilateur(boolean ventilateur) {
 		this.ventilateur = ventilateur;
 	}
-	public String getPompier() {
+	public boolean getPompier() {
 		return pompier;
 	}
-	public void setPompier(String pompier) {
+	public void setPompier(boolean pompier) {
 		this.pompier = pompier;
 	}
-	public String getAfficheur() {
+	public boolean getAfficheur() {
 		return afficheur;
 	}
-	public void setAfficheur(String afficheur) {
+	public void setAfficheur(boolean afficheur) {
 		this.afficheur = afficheur;
 	}
-	public String getGong() {
+	public boolean getGong() {
 		return gong;
 	}
-	public void setGong(String gong) {
+	public void setGong(boolean gong) {
 		this.gong = gong;
 	}
-	public String getSecoursAutomatique() {
+	public boolean getSecoursAutomatique() {
 		return secoursAutomatique;
 	}
-	public void setSecoursAutomatique(String secoursAutomatique) {
+	public void setSecoursAutomatique(boolean secoursAutomatique) {
 		this.secoursAutomatique = secoursAutomatique;
 	}
 	public String getEtat() {
