@@ -265,4 +265,32 @@ private ArrayList<String> Provenance() {
 		col.add("Inox leather skin");
 		return col;
 	}
+	@GetMapping("/dimensionCabine6")
+	private String dimensionCabine6() {
+		// Dimension cabine de la charge utile 6 pers	
+		return "1.000x1.200x2.170";
+	}
+	
+	@GetMapping("/dimensionCabine8")
+	private String dimensionCabine8() {
+		// Dimension cabine de la charge utile 6 pers	
+		return "1.000x1.200x2.170";
+	}
+	
+	
+	@GetMapping("/dimensionCabine10")
+	private String dimensionCabine10() {
+		// Dimension cabine de la charge utile 6 pers	
+		return "1.000x1.200x2.170";
+	}
+	
+	@GetMapping("/dimensionCabine13")
+		private ArrayList<String> DimensionCabine13() {
+			
+			ArrayList<String> col = new ArrayList<String>();
+
+				col.add("Un");
+				col.add("Double ");
+				return col;
+	}
 	}
