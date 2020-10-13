@@ -310,7 +310,7 @@ private ArrayList<String> Provenance() {
 	
 	
 	// Dimension cabine de la charge utile 21 pers	
-	@GetMapping("/dimensionCabine21")
+	@GetMapping("/dimensionCabine21")     
 	private String dimensionCabine21() {	
 		return "1.400x2.400x2.170";
 	}
@@ -326,5 +326,17 @@ private ArrayList<String> Provenance() {
 	private String dimensionCabine33() {	
 		return "1.800x2.700x2.170";
 	}
+	@GetMapping("/accesoires")
+	private ArrayList<String> accesoires() {
+		
+		ArrayList<String> col = new ArrayList<String>();
+
+			col.add("Ventilateur");
+			col.add("Pompier");
+			col.add("Afficheur");
+			col.add("Gong");
+			col.add("SecoursAutomatique");
+			return col;
+}
 	
 	}
