@@ -48,29 +48,27 @@ public class Devis implements Serializable {
 	private String porteCabine;
 	private String passage;
 	private String finition;
-	//private String accessoire;
-	private boolean ventilateur;
-	private boolean pompier;
-	private boolean afficheur;
-	private boolean gong;
-	private boolean secoursAutomatique;
+	private String accessoires;
+	//private boolean ventilateur;
+	//private boolean pompier;
+	//private boolean afficheur;
+	//private boolean gong;
+	//private boolean secoursAutomatique;
 	private String etat;
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="id_user")
 	private Utilisateur user;
 	
-	
 	public Devis() {
 		super();
-
+		
 	}
-
 
 	public Devis(Long id, String matricule, LocalDate dateDevis, String client, String adresse, String provenance,
 			int course, String arret, String vitesse, Long hauteurSousDalle, Long cuvette, String modeEntrainement,
 			String localMachinerie, String acces, String dimensionGaine, String chargeUtile, String dimensionCabine,
-			String modele, String porteCabine, String passage, String finition, boolean ventilateur, boolean pompier,
-			boolean afficheur, boolean gong, boolean secoursAutomatique, String etat, Utilisateur user) {
+			String modele, String porteCabine, String passage, String finition, String accessoires, String etat,
+			Utilisateur user) {
 		super();
 		this.id = id;
 		this.matricule = matricule;
@@ -93,290 +91,198 @@ public class Devis implements Serializable {
 		this.porteCabine = porteCabine;
 		this.passage = passage;
 		this.finition = finition;
-		this.ventilateur = ventilateur;
-		this.pompier = pompier;
-		this.afficheur = afficheur;
-		this.gong = gong;
-		this.secoursAutomatique = secoursAutomatique;
+		this.accessoires = accessoires;
 		this.etat = etat;
 		this.user = user;
 	}
-
 
 	public Long getId() {
 		return id;
 	}
 
-
 	public void setId(Long id) {
 		this.id = id;
 	}
-
 
 	public String getMatricule() {
 		return matricule;
 	}
 
-
 	public void setMatricule(String matricule) {
 		this.matricule = matricule;
 	}
-
 
 	public LocalDate getDateDevis() {
 		return dateDevis;
 	}
 
-
 	public void setDateDevis(LocalDate dateDevis) {
 		this.dateDevis = dateDevis;
 	}
-
 
 	public String getClient() {
 		return client;
 	}
 
-
 	public void setClient(String client) {
 		this.client = client;
 	}
-
 
 	public String getAdresse() {
 		return adresse;
 	}
 
-
 	public void setAdresse(String adresse) {
 		this.adresse = adresse;
 	}
-
 
 	public String getProvenance() {
 		return provenance;
 	}
 
-
 	public void setProvenance(String provenance) {
 		this.provenance = provenance;
 	}
-
 
 	public int getCourse() {
 		return course;
 	}
 
-
 	public void setCourse(int course) {
 		this.course = course;
 	}
-
 
 	public String getArret() {
 		return arret;
 	}
 
-
 	public void setArret(String arret) {
 		this.arret = arret;
 	}
-
 
 	public String getVitesse() {
 		return vitesse;
 	}
 
-
 	public void setVitesse(String vitesse) {
 		this.vitesse = vitesse;
 	}
-
 
 	public Long getHauteurSousDalle() {
 		return hauteurSousDalle;
 	}
 
-
 	public void setHauteurSousDalle(Long hauteurSousDalle) {
 		this.hauteurSousDalle = hauteurSousDalle;
 	}
-
 
 	public Long getCuvette() {
 		return cuvette;
 	}
 
-
 	public void setCuvette(Long cuvette) {
 		this.cuvette = cuvette;
 	}
-
 
 	public String getModeEntrainement() {
 		return modeEntrainement;
 	}
 
-
 	public void setModeEntrainement(String modeEntrainement) {
 		this.modeEntrainement = modeEntrainement;
 	}
-
 
 	public String getLocalMachinerie() {
 		return localMachinerie;
 	}
 
-
 	public void setLocalMachinerie(String localMachinerie) {
 		this.localMachinerie = localMachinerie;
 	}
-
 
 	public String getAcces() {
 		return acces;
 	}
 
-
 	public void setAcces(String acces) {
 		this.acces = acces;
 	}
-
 
 	public String getDimensionGaine() {
 		return dimensionGaine;
 	}
 
-
 	public void setDimensionGaine(String dimensionGaine) {
 		this.dimensionGaine = dimensionGaine;
 	}
-
 
 	public String getChargeUtile() {
 		return chargeUtile;
 	}
 
-
 	public void setChargeUtile(String chargeUtile) {
 		this.chargeUtile = chargeUtile;
 	}
-
 
 	public String getDimensionCabine() {
 		return dimensionCabine;
 	}
 
-
 	public void setDimensionCabine(String dimensionCabine) {
 		this.dimensionCabine = dimensionCabine;
 	}
-
 
 	public String getModele() {
 		return modele;
 	}
 
-
 	public void setModele(String modele) {
 		this.modele = modele;
 	}
-
 
 	public String getPorteCabine() {
 		return porteCabine;
 	}
 
-
 	public void setPorteCabine(String porteCabine) {
 		this.porteCabine = porteCabine;
 	}
-
 
 	public String getPassage() {
 		return passage;
 	}
 
-
 	public void setPassage(String passage) {
 		this.passage = passage;
 	}
-
 
 	public String getFinition() {
 		return finition;
 	}
 
-
 	public void setFinition(String finition) {
 		this.finition = finition;
 	}
 
-
-	public boolean isVentilateur() {
-		return ventilateur;
+	public String getAccessoires() {
+		return accessoires;
 	}
 
-
-	public void setVentilateur(boolean ventilateur) {
-		this.ventilateur = ventilateur;
+	public void setAccessoires(String accessoires) {
+		this.accessoires = accessoires;
 	}
-
-
-	public boolean isPompier() {
-		return pompier;
-	}
-
-
-	public void setPompier(boolean pompier) {
-		this.pompier = pompier;
-	}
-
-
-	public boolean isAfficheur() {
-		return afficheur;
-	}
-
-
-	public void setAfficheur(boolean afficheur) {
-		this.afficheur = afficheur;
-	}
-
-
-	public boolean isGong() {
-		return gong;
-	}
-
-
-	public void setGong(boolean gong) {
-		this.gong = gong;
-	}
-
-
-	public boolean isSecoursAutomatique() {
-		return secoursAutomatique;
-	}
-
-
-	public void setSecoursAutomatique(boolean secoursAutomatique) {
-		this.secoursAutomatique = secoursAutomatique;
-	}
-
 
 	public String getEtat() {
 		return etat;
 	}
 
-
 	public void setEtat(String etat) {
 		this.etat = etat;
 	}
 
-
 	public Utilisateur getUser() {
 		return user;
 	}
-
 
 	public void setUser(Utilisateur user) {
 		this.user = user;
@@ -384,7 +290,7 @@ public class Devis implements Serializable {
 	
 	
 	
-	
+		
 	
 }
 	

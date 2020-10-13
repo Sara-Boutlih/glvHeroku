@@ -265,32 +265,66 @@ private ArrayList<String> Provenance() {
 		col.add("Inox leather skin");
 		return col;
 	}
+	// Dimension cabine de la charge utile 4 pers	
+	@GetMapping("/dimensionCabine4")
+	private String dimensionCabine4() {		
+		return "1.000x900x2.070";
+	}
+	
+	
+	// Dimension cabine de la charge utile 6 pers
 	@GetMapping("/dimensionCabine6")
-	private String dimensionCabine6() {
-		// Dimension cabine de la charge utile 6 pers	
+	private String dimensionCabine6() {	
 		return "1.000x1.200x2.170";
 	}
 	
+	// Dimension cabine de la charge utile 8 pers	
 	@GetMapping("/dimensionCabine8")
-	private String dimensionCabine8() {
-		// Dimension cabine de la charge utile 6 pers	
-		return "1.000x1.200x2.170";
+	private String dimensionCabine8() {		
+		return "1.100x1.400x2.170";
 	}
 	
-	
+	// Dimension cabine de la charge utile 10 pers	
 	@GetMapping("/dimensionCabine10")
-	private String dimensionCabine10() {
-		// Dimension cabine de la charge utile 6 pers	
-		return "1.000x1.200x2.170";
+	private String dimensionCabine10() {		
+		return "1.350x1.450x2.170";
 	}
 	
+	
+	// Dimension cabine de la charge utile 13 pers	
 	@GetMapping("/dimensionCabine13")
 		private ArrayList<String> DimensionCabine13() {
 			
 			ArrayList<String> col = new ArrayList<String>();
 
-				col.add("Un");
-				col.add("Double ");
+				col.add("1.100x2.100x2.170");
+				col.add("1.400x1.600x2.170");
 				return col;
 	}
+	
+	// Dimension cabine de la charge utile 17 pers	
+	@GetMapping("/dimensionCabine17")
+	private String dimensionCabine17() {	
+		return "1.200x2.300x2.170";
+	}
+	
+	
+	// Dimension cabine de la charge utile 21 pers	
+	@GetMapping("/dimensionCabine21")
+	private String dimensionCabine21() {	
+		return "1.400x2.400x2.170";
+	}
+	
+	// Dimension cabine de la charge utile 26 pers	
+	@GetMapping("/dimensionCabine26")
+	private String dimensionCabine26() {
+		return "1.500x2.700x2.170";
+	}
+	
+	// Dimension cabine de la charge utile 33 pers	
+	@GetMapping("/dimensionCabine33")
+	private String dimensionCabine33() {	
+		return "1.800x2.700x2.170";
+	}
+	
 	}
