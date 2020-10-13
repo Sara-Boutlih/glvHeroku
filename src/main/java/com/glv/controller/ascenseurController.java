@@ -326,7 +326,7 @@ private ArrayList<String> Provenance() {
 	private String dimensionCabine33() {	
 		return "1.800x2.700x2.170";
 	}
-	@GetMapping("/accesoires")
+	@GetMapping("/accessoires")
 	private ArrayList<String> accesoires() {
 		
 		ArrayList<String> col = new ArrayList<String>();
