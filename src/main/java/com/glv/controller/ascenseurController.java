@@ -312,7 +312,7 @@ private ArrayList<String> Provenance() {
 	// Dimension cabine de la charge utile 21 pers	
 	@GetMapping("/dimensionCabine21")     
 	private String dimensionCabine21() {	
-		return "1.400x2.400x2.170";
+		return "1.400 x 2.400x2.170";
 	}
 	
 	// Dimension cabine de la charge utile 26 pers	
@@ -335,7 +335,7 @@ private ArrayList<String> Provenance() {
 			col.add("Pompier");
 			col.add("Afficheur");
 			col.add("Gong");
-			col.add("SecoursAutomatique");
+			col.add("Secours automatique");
 			return col;
 }
 	
